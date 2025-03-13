@@ -9,9 +9,11 @@ public class ShopRepository {
         tmp[tmp.length - 1] = product;
         return tmp;
     }
+
     public void add(Product product) {
         products = addToArray(products, product);
     }
+
     public Product findById(int id) {
         for (Product product : products) {
             if (product.getId() == id) {
@@ -20,6 +22,7 @@ public class ShopRepository {
         }
         return null;
     }
+
     public void removeById(int id) {
         Product product = findById(id);
         if (product == null) {
@@ -36,6 +39,7 @@ public class ShopRepository {
         }
         products = tmp;
     }
+
     public Product[] findAll() {
         return products;
     }
